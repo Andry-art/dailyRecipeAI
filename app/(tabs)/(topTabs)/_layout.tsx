@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     borderWidth: 2,
     borderColor: COLORS.accent,
-    marginTop: 24,
+    marginTop: Platform.OS === "ios" ? 24 : 40,
     zIndex: 10,
   },
   tabBarIndicatorStyle: {

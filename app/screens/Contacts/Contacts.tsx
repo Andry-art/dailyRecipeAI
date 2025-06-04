@@ -4,19 +4,21 @@ import { COLORS } from "@/constants/Colors";
 import { FONTS } from "@/constants/Fonts";
 import i18n from "@/i18n";
 import { FontAwesome } from "@expo/vector-icons";
-import { useCallback, useState } from "react";
+import { BottomSheetModalMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
+import { useCallback, useRef } from "react";
 import { Linking, StyleSheet, Text, View } from "react-native";
+import DonateModal from "./components/DonateModal";
 
 const Contacts = () => {
-  const [isAdsDisable, setIsAdsDisable] = useState(false);
-
-  const onPressAds = useCallback(() => {
-    setIsAdsDisable((state) => !state);
-  }, []);
+  const bottomSheetModalRef = useRef<BottomSheetModalMethods>(null);
 
   const onPressGoogle = useCallback(() => {
     Linking.openURL("mailto:dailyrecipeai@gmail.com");
     // dailyrecipeai@gmail.com
+  }, []);
+
+  const onPressDonate = useCallback(() => {
+    bottomSheetModalRef.current?.present();
   }, []);
 
   return (
@@ -34,19 +36,15 @@ const Contacts = () => {
         onPress={onPressGoogle}
       />
 
-      {/* <ContactButton
-        title={i18n.t("disable")}
+      <ContactButton
+        title={i18n.t("donate")}
         leftIcon={
-          <MaterialCommunityIcons
-            name="advertisements"
-            size={24}
-            color={COLORS.secondary}
-          />
+          <FontAwesome name="dollar" size={24} color={COLORS.secondary} />
         }
-        isAddButton
-        isAdsDisable={isAdsDisable}
-        onPress={onPressAds}
-      /> */}
+        onPress={onPressDonate}
+      />
+
+      <DonateModal bottomSheetModalRef={bottomSheetModalRef} />
       <AdBanner />
     </View>
   );

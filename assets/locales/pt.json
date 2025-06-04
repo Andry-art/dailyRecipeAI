@@ -1,7 +1,7 @@
 {
   "photo": "Foto",
   "text": "Texto",
-  "add_photo": "Adicionar foto",
+  "add_photo": "Adicionar foto dos ingredientes",
   "problem": "Ops... houve um problema",
   "retake": "Tente tirar a foto novamente ou verifique sua conexão com a internet.",
   "how_upload": "Como você gostaria de fazer o upload da sua imagem?",
@@ -17,8 +17,12 @@
   "contacts": "Contatos",
   "disable": "Desativar anúncios",
   "building": "Oi! Estou criando este aplicativo sozinho.",
-  "subscribe": "Se você tiver ideias ou sugestões, adoraria ouvi-las. E se quiser apoiar o projeto, você pode remover os anúncios com uma pequena assinatura.",
+  "subscribe": "Se você tiver ideias ou sugestões — adoraria ouvir! E se quiser apoiar o projeto, pode fazê-lo com uma pequena doação.",
   "saved_locally": "Suas receitas salvas são armazenadas localmente e serão perdidas se o aplicativo for desinstalado.",
   "read_more": "Ler mais...",
-  "back_search": "Voltar à pesquisa"
+  "back_search": "Voltar à pesquisa",
+  "donate": "Doar",
+  "card": "Cartão",
+  "crypto": "Cripto",
+  "donate_thanks": "Muito obrigado por me apoiar — isso realmente significa muito para mim!"
 }

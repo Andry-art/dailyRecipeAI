@@ -2,11 +2,11 @@ import axios from "axios";
 import { getLocales } from "expo-localization";
 
 const PAT = "9877562403b647799271b42331504762";
-const USER_ID = "gcp";
-const APP_ID = "generate";
+const USER_ID = "openai";
+const APP_ID = "chat-completion";
 // Change these to whatever model and image URL you want to use
-const MODEL_ID = "gemma-3-4b-it";
-const MODEL_VERSION_ID = "f8c9f628b7034ee9bbb708a23aa6ca7b";
+const MODEL_ID = "gpt-4o";
+const MODEL_VERSION_ID = "abe20498ef014e3c98ade2f5c3ee5d9d";
 
 export const fixBrokenJsonArray = (jsonText: string) => {
   const objectRegex = /\{[^}]*\}/g;
